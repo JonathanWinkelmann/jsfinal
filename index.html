@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cylon</title>
+    <link rel="icon" href="./imagenes/cyloncirculo.PNG">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Six+Caps&display=swap" rel="stylesheet">
+    <!-- estilos de css -->
+    <link rel="stylesheet" href="./estilos/estilos.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbarLeft">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#seccionProductos">Nuestras cervezas</a></li>
+                </ul>
+            </div>
+            <a class="logo" href="#"><img src="./imagenes/cyloncirculo.PNG"></a>
+            <div class="navbarRight">
+                <ul>
+                    <li><a href="#seccionSobreNosotros">Sobre nosotros</a></li>
+                    <li><a href="#seccionContacto">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="iconos">
+                    <a>
+                        <div class="botonCarrito">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span id="contadorCarrito">0</span>
+                        </div>
+                    </a>
+                </div>
+        </nav>
+    </header>
+
+
+
+
+
+    <section class="home" id="home">
+
+        <div class="content">
+            <h3>fresh in the morning</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat labore, sint cupiditate distinctio tempora reiciendis.</p>
+        </div>
+    
+    </section>
+
+
+
+
+
+
+    <section class="seccionProductos" id="seccionProductos">
+            <h2 class="titulo">Nuestras cervezas</h2>
+            <div id="contenedorProductos" class="contenedorProductos">
+                <!-- productos diseñados en js -->
+            </div>
+    </section>
+
+
+
+
+
+
+
+
+    <section class="about" id="about">
+
+        <h1 class="heading"> <span>about</span> us </h1>
+    
+        <div class="row">
+    
+            <div class="image">
+                <img src="/imagenes/c5.jpg" alt="">
+            </div>
+    
+            <div class="content">
+                <h3>what makes  special?</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus qui ea ullam, enim tempora ipsum fuga alias quae ratione a officiis id temporibus autem? Quod nemo facilis cupiditate. Ex, vel?</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit amet enim quod veritatis, nihil voluptas culpa! Neque consectetur obcaecati sapiente?</p>
+
+            </div>
+    
+        </div>
+    
+    </section>
+
+
+
+
+
+
+
+    <section class="seccionContacto" id="seccionContacto">
+        <h2 class="titulo" id="tituloContacto">Te damos la bienvenida</h2>
+        <p id="description">Dejanos un mensaje y te responderemos a la brevedad</p>
+        <form action="" id="formulario">
+            <fieldset>
+                <label id="nombreLabel">Nombre<input id="nombre" type="text" placeholder="Nombre"></input></label>
+                <label id="emailLabel">Email<input id="email"  placeholder="Email"></input></label>
+                <label id="edadLabel">Edad<input id="edad" type="number" placeholder="Edad"></input></label>
+            </fieldset>
+            <label id="comentarioLabel">Dejanos tu comentario
+                <textarea id="comentario" type="text" rows="3" cols="30" placeholder="Comentario"></textarea>
+            </label>
+            <fieldset>
+                <input id="submit" type="submit" value="Submit"/>
+            </fieldset>
+        </form>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+    <section class="footer">
+
+        <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+        </div>
+    
+        <div class="links">
+            <a href="#">home</a>
+            <a href="#">about</a>
+            <a href="#">menu</a>
+            <a href="#">contact</a>
+        </div>
+    
+        <div class="credit">created by <span>mr. cylon</span> | all rights reserved</div>
+    
+    </section>
+    
+    <!-- Modal se abre al clickear boton de carrito -->
+    <div class="modalContenedorCarrito" id="modalContenedorCarrito">
+        <div class="modalCarrito">
+            <button class="carritoCerrar">
+                <div class="circulo"></div>
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h3>CARRITO</h3>
+            <div id="carritoContenedor" class="carritoContenedor">
+                <!-- modal en JavaScript index -->
+            </div>
+            <p class="precioTotal">
+                PRECIO TOTAL: 
+                <span id="precioTotal">0</span>
+            </p>
+            <button class="comprar" id="comprar">Comprar</button>
+            <button id="vaciarCarrito" class="vaciarCarrito">Vaciar carrito</button>
+        </div>
+    </div>
+    <!-- Script Sweet Alert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Script JS-->
+    <script src="./formulario.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
